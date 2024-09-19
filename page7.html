@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มสมัครสมาชิก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgb(250, 181, 193);
+            border-radius: 8px;
+            box-shadow: 0 0 10px #000000;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #000000;
+            text-align: center;
+        }
+        h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+            color: #000000;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #000000;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group textarea,
+        .form-group select,
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .form-group select {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+        .form-group input[type="checkbox"],
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+        .form-group .radio-label,
+        .form-group .checkbox-label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .form-group .file-input {
+            border: none;
+            padding: 0;
+        }
+        .submit-btn {
+            background-color: #b4a3fc;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>สมัครสมาชิก</h1>
+
+        <div class="form-group">
+            <label for="name">ชื่อผู้ใช้:</label>
+            <input id="name" name="name" type="text" maxlength="30" placeholder="กรุณากรอกชื่อผู้ใช้">
+        </div>
+
+        <div class="form-group">
+            <label for="password">รหัสผ่าน:</label>
+            <input id="password" name="password" type="password" maxlength="8" placeholder="กรุณากรอกรหัสผ่าน">
+        </div>
+        
+        <div class="form-group">
+            <label for="">อีเมลเพื่อการติดต่อ:</label>
+            <input id="name" name="name" type="text" maxlength="50" placeholder="กรุณากรอกอีเมล">
+        </div>
+
+        <div class="form-group">
+            <label for="comment">ความคิดเห็น:</label>
+            <textarea id="comment" name="comment" cols="50" rows="5" placeholder="กรุณากรอกความคิดเห็น"></textarea>
+        </div>
+        <div class="form-group">
+            <label>กรุณาเลือกเพศของท่าน:</label>
+            <label class="radio-label">
+                <input name="gender" type="radio" value="male"> ปวช
+            </label>
+            <label class="radio-label">
+                <input name="gender" type="radio" value="female"> ปวส
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>กรุณาเลือกเพศของท่าน:</label>
+            <label class="radio-label">
+                <input name="gender" type="radio" value="male"> ชาย
+            </label>
+            <label class="radio-label">
+                <input name="gender" type="radio" value="female"> หญิง
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="department">กรุณาเลือกแผนกของท่าน:</label>
+            <select id="department" name="department">
+                <option value="ช่างยนต์">ช่างยนต์</option>
+                <option value="ช่างกลโรงงาน">ช่างกลโรงงาน</option>
+                <option value="ช่างเชื่อมโลหะและตรวจสอบโดยไม่ทำลาย (NDT)">ช่างเชื่อมโลหะและตรวจสอบโดยไม่ทำลาย (NDT)</option>
+                <option value="ช่างไฟฟ้ากำลัง">ช่างไฟฟ้ากำลัง</option>
+                <option value="ช่างอิเล็กทรอนิกส์">ช่างอิเล็กทรอนิกส์</option>
+                <option value="ช่างก่อสร้าง">ช่างก่อสร้าง</option>
+                <option value="ช่างเขียนแบบเครื่องกล">ช่างเขียนแบบเครื่องกล</option>
+                <option value="เมคคาทรอนิกส์">เมคคาทรอนิกส์</option>
+                <option value="เครื่องมือวัดและควบคุม">เครื่องมือวัดและควบคุม</option>
+                <option value="เทคนิคพลังงาน">เทคนิคพลังงาน</option>
+                <option value="ช่างอากาศยาน">ช่างอากาศยาน</option>
+                <option value="เทคนิคควบคุมและซ่อมบำรุงระบบขนส่งทางราง">เทคนิคควบคุมและซ่อมบำรุงระบบขนส่งทางราง</option>
+                <option value="การบัญชี">การบัญชี</option>
+                <option value="คอมพิวเตอร์ธุรกิจ">คอมพิวเตอร์ธุรกิจ</option>
+                <option value="ธุรกิจการบิน">ธุรกิจการบิน</option>
+                <option value="การจัดการโลจิสติกส์และการจัดการธุรกิจค้าปลีก">การจัดการโลจิสติกส์และการจัดการธุรกิจค้าปลีก</option>
+                <option value="การโรงแรม">การโรงแรม</option>
+                <option value="การท่องเที่ยว">การท่องเที่ยว</option>
+                <option value="เทคโนโลยีสารสนเทศและเทคโนโลยีคอมพิวเตอร์">เทคโนโลยีสารสนเทศและเทคโนโลยีคอมพิวเตอร์</option>
+                <option value="เทคนิคพื้นฐาน">เทคนิคพื้นฐาน</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="img">กรุณาเลือกไฟล์ของท่าน:</label>
+            <input id="img" name="img" type="file" class="file-input">
+        </div>
+
+        <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+    </div>
+
+</body>
+</html>
